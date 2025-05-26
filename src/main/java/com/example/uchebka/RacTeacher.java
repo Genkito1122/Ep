@@ -171,11 +171,19 @@ public class RacTeacher extends AppCompatActivity {
             Toast.makeText(this, "Выберите курс", Toast.LENGTH_SHORT).show();
             return;
         }
-
         if (date.isEmpty() || time.isEmpty()) {
             Toast.makeText(this, "Заполните дату и время", Toast.LENGTH_SHORT).show();
             return;
         }
+        if (date.isEmpty()) {
+            Toast.makeText(this, "Заполните дату", Toast.LENGTH_SHORT).show();
+            return;
+        }
+                if (time.isEmpty()) {
+            Toast.makeText(this, "Заполните время", Toast.LENGTH_SHORT).show();
+            return;
+        }
+        
 
         String courseId = courseids.get(coursePos);
         String title = coursenames.get(coursePos);
